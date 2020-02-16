@@ -1,3 +1,6 @@
+# 由于hulisang大佬已经把仓库删除，本人仅做备份
+下面是hulisang的原话：
+
 感恩原作者rico辛苦付出
 本人仅做备份和后续维护
 caddy镜像更新支持tls1.3
@@ -151,7 +154,7 @@ wget https://www.moerats.com/usr/shell/swap.sh && bash swap.sh
 ~~~
 mkdir v2ray-agent  &&  \
 cd v2ray-agent && \
-curl https://raw.githubusercontent.com/hulisang/v2ray-sspanel-v3-mod_Uim-plugin/master/install.sh -o install.sh && \
+curl https://raw.githubusercontent.com/haig233/v2ray-sspanel-v3-mod_Uim-plugin/master/install.sh -o install.sh && \
 chmod +x install.sh && \
 bash install.sh
 ~~~
