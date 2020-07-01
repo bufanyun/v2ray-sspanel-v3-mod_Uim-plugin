@@ -6,8 +6,8 @@ services:
     restart: always
     network_mode: "host"
     environment:
-      sspanel_url: "https://xxxx"
-      key: "xxxx"
+      sspanel_url: "https://v2vs.fun"
+      key: "NimaQu"
       speedtest: 6
       node_id: 10
       api_port: 2333
