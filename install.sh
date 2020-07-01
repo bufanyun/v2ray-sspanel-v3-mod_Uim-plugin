@@ -339,7 +339,7 @@ install_docker(){
     echo
     echo "Thanks for using this script!"
     echo
-    echo "Made By missuo"
+    echo "https://t.me/missuo"
     echo
 }
 
