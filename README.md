@@ -5,6 +5,10 @@
 
 此教程为免费版本的SSPanel-V3-Mod-UIM的V2Ray后端 不限制用户数 可以放心食用
 
+# 重要更新 (2020.7.1)
+
+已完成此后端对接一键脚本 联系 [TG](https://t.me/missuo)
+
 # Docker版 WS 中转的 食用方法
 ~~~
 Written By monstarvincent
