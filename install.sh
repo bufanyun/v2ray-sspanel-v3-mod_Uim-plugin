@@ -335,11 +335,11 @@ install_docker(){
     echo
     echo -e "Congratulations, V2ray server install completed!"
     echo
-    echo "Enjoy it!"
-    echo
     echo "Thanks for using this script!"
     echo
-    echo "https://t.me/missuo"
+    echo "Enjoy it!"
+    echo
+    echo "t.me/missuo"
     echo
 }
 
