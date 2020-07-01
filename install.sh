@@ -337,6 +337,10 @@ install_docker(){
     echo
     echo "Enjoy it!"
     echo
+    echo "Thanks for using this script!"
+    echo
+    echo "Made By missuo"
+    echo
 }
 
 install_check(){
