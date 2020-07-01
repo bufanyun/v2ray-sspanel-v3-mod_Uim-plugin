@@ -1,9 +1,11 @@
-# 由于原作者大佬已经删除仓库 本人留作备份
+# 简单声明
 
+由于原作者删除了此仓库 本人Fork之后 加上了一些补充说明
 感恩原作者Rico辛苦付出
-本人仅做备份和后续维护
 
-# 简单介绍一下 Docker版 WS 中转的教程
+此教程为免费版本的SSPanel-V3-Mod-UIM的V2Ray后端 不限制用户数 可以放心食用
+
+# Docker版 WS 中转的 食用方法
 ~~~
 Written By monstarvincent
 ~~~
