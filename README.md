@@ -32,7 +32,7 @@ systemctl status docker.service
 ~~~
 yum -y install git nano
 git clone https://github.com/monstarvincent/sspanel-v2ray.git
-cd /sspanel-v2ray/Docker/V2ray/
+cd sspanel-v2ray/Docker/V2ray
 nano docker-compose.yml
 ~~~
 配置文件修改如下：
