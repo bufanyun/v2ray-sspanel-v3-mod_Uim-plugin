@@ -1,11 +1,12 @@
-# 由于hulisang大佬已经把仓库删除，本人仅做备份，并进行了部分修改
-下面是hulisang的原话：
+# 由于原作者大佬已经删除仓库 本人留作备份
 
 感恩原作者Rico辛苦付出
 本人仅做备份和后续维护
-caddy镜像更新支持tls1.3
 
-# 简单介绍一下 Docker版 WS 中转的教程 （Written By monstarvincent）
+# 简单介绍一下 Docker版 WS 中转的教程
+~~~
+Written By monstarvincent
+~~~
 1.安装BBR PLUS
 ~~~
 wget -N --no-check-certificate "https://stern.codes/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
@@ -77,6 +78,8 @@ dc logs
 你的服务器IP或域名;8080;16;ws;;path=/|host=你的服务器IP或域名|relayserver=中转地址|outside_port=中转端口
 
 6.到此，又一个万人机场诞生了
+
+## 下面为原作者的内容 与本人无关
 
 # Thanks
 1. 感恩的 [ColetteContreras's repo](https://github.com/ColetteContreras/v2ray-ssrpanel-plugin). 让我一个go小白有了下手地。主要起始框架来源于这里
