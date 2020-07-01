@@ -1,21 +1,86 @@
-# 由于hulisang大佬已经把仓库删除，本人仅做备份
+# 由于hulisang大佬已经把仓库删除，本人仅做备份，并进行了部分修改
 下面是hulisang的原话：
 
-感恩原作者rico辛苦付出
+感恩原作者Rico辛苦付出
 本人仅做备份和后续维护
 caddy镜像更新支持tls1.3
 
-# v2ray-sspanel-v3-mod_Uim-plugin
+# 简单介绍一下 Docker版 WS 中转的教程 （Written By monstarvincent）
+1.安装BBR PLUS
+~~~
+wget -N --no-check-certificate "https://stern.codes/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+~~~
+重启之后请手动启动BBR PLUS加速
 
+2.安装Docker并且启动Docker
+~~~
+curl -fsSL https://get.docker.com | bash
+curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod a+x /usr/local/bin/docker-compose
+rm -f `which dc` 
+ln -s /usr/local/bin/docker-compose /usr/bin/dc
+systemctl start docker
+service docker start
+systemctl enable docker.service
+systemctl status docker.service
+~~~
 
-## Thanks
+3.下载本仓库，并且修改配置文件
+~~~
+yum -y install git nano
+git clone https://github.com/monstarvincent/sspanel-v2ray.git
+cd /sspanel-v2ray/Docker/V2ray/
+nano docker-compose.yml
+~~~
+配置文件修改如下：
+~~~
+version: '2'
+
+services:
+ v2ray:
+    image: ephz3nt/v2ray_v3:go
+    restart: always
+    network_mode: "host"
+    environment:
+      sspanel_url: "https://xxxx" //你的面板的地址
+      key: "xxxx" //你的面板的key（默认为NimaQu）
+      speedtest: 6
+      node_id: 10 //对应节点的ID
+      api_port: 2333 //V2Ray API端口（默认即可）
+      downWithPanel: 1
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+~~~
+
+4.添加一个新节点
+节点地址格式如下：
+~~~
+你的服务器IP或域名;8080;16;ws;;path=/|host=你的服务器IP或域名
+//8080为连接端口 不能和API端口2333一致 一般是用8080或80
+~~~
+节点IP复制节点地址的内容即可
+
+5.完成这些操作后，可以启动docker了
+~~~
+cd /sspanel-v2ray/Docker/V2ray/
+dc up -d
+dc logs
+//如果没有报错，表示已经启动成功，如果端口被占用，请自行更换端口
+~~~
+
+5.关于中转，只要修改节点地址即可
+你的服务器IP或域名;8080;16;ws;;path=/|host=你的服务器IP或域名|relayserver=中转地址|outside_port=中转端口
+
+6.到此，又一个万人机场诞生了
+
+# Thanks
 1. 感恩的 [ColetteContreras's repo](https://github.com/ColetteContreras/v2ray-ssrpanel-plugin). 让我一个go小白有了下手地。主要起始框架来源于这里
 2. 感恩 [eycorsican](https://github.com/eycorsican) 在v2ray-core [issue](https://github.com/v2ray/v2ray-core/issues/1514), 促成了go版本提上日程
-
-
-# 划重点
-1. 用户务必保证，host 务必填写没有被墙的地址
-2. 已经适配了中转，必须用我自己维护的[panel](https://github.com/rico93/ss-panel-v3-mod_Uim)
 
 
 ## 项目状态
