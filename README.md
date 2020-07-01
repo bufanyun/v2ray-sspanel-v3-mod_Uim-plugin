@@ -45,11 +45,11 @@ services:
     environment:
       sspanel_url: "https://xxxx" //你的面板的地址
       key: "xxxx" //你的面板的key（默认为NimaQu）
-      speedtest: 6
+      speedtest: 6 //代表六小时执行一次延迟测试
       node_id: 10 //对应节点的ID
       api_port: 2333 //V2Ray API端口（默认即可）
-      downWithPanel: 1
-      TZ: "Asia/Shanghai"
+      downWithPanel: 1 //不用修改
+      TZ: "Asia/Shanghai" //时区为中国上海 不用修改
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
